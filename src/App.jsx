@@ -4,4 +4,6 @@ import { useSelector } from "react-redux";
 
 export const PrivateRoute = ({ component: Component, redirectTo = "/" }) => {
   const isAuth = useSelector(isAuthSelector);
+
+  return !isAuth ? <Navigate to={redirectTo} /> : Component;
 };
