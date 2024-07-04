@@ -13,4 +13,4 @@ export default App
 // import React from "react";
 // >>>>>>> 22a6b5ca81ae7383834c716c250d78729ee50ac0
 
-ha ozgardi 
+// redux toolkit da qilelik 
