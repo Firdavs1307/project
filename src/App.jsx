@@ -1,18 +1,25 @@
-import './App.css'
+import { Route, Routes, Navigate, redirect } from "react-router-dom";
+import { Component, lazy } from "react";
+import { useSelector } from "react-redux";
+
+export const PrivateRoute = ({ component: Component, redirectTo = "/" }) => {
+  const isAuth = useSelector(isAuthSelector);
+
+  return !isAuth ? <Navigate to={redirectTo} /> : Component;
+};
+
+export const RestrictedRoute = ({ component: Component, redirectTo = "/" }) => {
+  const isAuth = useSelector(isAuthSelector);
+
+  return isAuth ? <Navigate to={redirectTo} /> : Component;
+};
 
 function App() {
+  const isAuth = useSelector(isAuthSelector);
+
   return (
-    <>
-      O'zgardimi
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<SharedLayout />}></Route>
+    </Routes>
+  );
 }
-
-export default App
-// =======
-// import React from "react";
-// >>>>>>> 22a6b5ca81ae7383834c716c250d78729ee50ac0
-
-// redux toolkit da qilelik
-// package.json ga oting ozgarishlardi koras
-// ha bildim
