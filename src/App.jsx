@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Route, Routes, Navigate } from "react-router-dom";
 import { lazy } from "react";
 import { useSelector } from "react-redux";
@@ -39,14 +38,3 @@ function App() {
 }
 
 export default App;
-=======
-import React from 'react'
-
-function App() {
-  return (
-    <div>App</div>
-  )
-}
-
-export default App
->>>>>>> e9e92240819fbd3e689789408a1bedf646add5d6
