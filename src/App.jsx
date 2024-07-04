@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      helloaaaaaaa nurmurod
+      O'zgardimi
     </>
   )
 }
