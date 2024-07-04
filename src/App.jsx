@@ -15,3 +15,4 @@ export default App
 
 // redux toolkit da qilelik
 // package.json ga oting ozgarishlardi koras
+// ha bildim
