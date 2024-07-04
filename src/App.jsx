@@ -7,3 +7,19 @@ export const PrivateRoute = ({ component: Component, redirectTo = "/" }) => {
 
   return !isAuth ? <Navigate to={redirectTo} /> : Component;
 };
+
+export const RestrictedRoute = ({ component: Component, redirectTo = "/" }) => {
+  const isAuth = useSelector(isAuthSelector);
+
+  return isAuth ? <Navigate to={redirectTo} /> : Component;
+};
+
+function App() {
+  const isAuth = useSelector(isAuthSelector);
+
+  return (
+    <Routes>
+      <Route path="/" element={<SharedLayout />}></Route>
+    </Routes>
+  );
+}
