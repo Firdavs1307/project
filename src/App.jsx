@@ -1,11 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       O'zgardimi
@@ -14,3 +9,6 @@ function App() {
 }
 
 export default App
+// =======
+// import React from "react";
+// >>>>>>> 22a6b5ca81ae7383834c716c250d78729ee50ac0
