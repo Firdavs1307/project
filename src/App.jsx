@@ -3,6 +3,8 @@ import { lazy } from "react";
 import { useSelector } from "react-redux";
 import { isAuthSelector } from "./redux/auth/selector";
 
+import SharedLayout from "./components/SharedLayout/SharedLayout";
+
 const SignInPage = lazy(() => import("./pages/SignInPage/SignInPage"));
 const SignUpPage = lazy(() => import("./pages/SignUpPage/SignUpPage"));
 
@@ -11,6 +13,14 @@ function App() {
 
   return (
     <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route
+          path="/"
+          element={
+            isAuth ? <Navigate to="/home" /> : <Navigate to="/welcome" />
+          }
+        />
+      </Route>
       <Route
         path="/signin"
         element={
@@ -25,7 +35,6 @@ function App() {
       />
 
       <Route path="*" element={<ErrorPage />} />
-
     </Routes>
   );
 }
