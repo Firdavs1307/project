@@ -220,8 +220,8 @@ export const WaterBulb = styled.div`
       background-color: #407bff;
     }
     to {
-      background-color: #f3ecec;
-    }
+        background-color: #f3ecec;
+      }
   }
 `;
 
