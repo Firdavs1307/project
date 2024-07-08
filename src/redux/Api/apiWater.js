@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { Axios } from "axios";
 
 axios.defaults.baseURL = "https://water-backend-4k0b.onrender.com";
 
