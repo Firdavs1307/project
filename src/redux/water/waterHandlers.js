@@ -49,6 +49,8 @@ export const handleAddWater = (state, { payload }) => {
     state.month.push({
       percent: Math.round(state.dayWaterStat.percentageWaterAmount),
       dayOfMonth: today,
+      // username: Math.round(1 -2)
+      
     });
   }
 };
